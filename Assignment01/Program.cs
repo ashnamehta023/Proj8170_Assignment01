@@ -10,7 +10,7 @@ namespace Assignment01
     {
         static void Main(string[] args)
         {
-            int length, width, menuChoice;
+            int length, width, menuSelected;
             string inputLength, inputWidth;
 
             try
@@ -35,12 +35,12 @@ namespace Assignment01
                     Console.Write("\n 7. Exit");
                     Console.Write("\n___________________________________________\n");
                     Console.Write("\n Enter Your Choice from 1 to 7 : ");
-                    menuChoice = int.Parse(Console.ReadLine());
+                    menuSelected = int.Parse(Console.ReadLine());
 
 
                     //Switch to control menu options
                     int result;
-                    switch (menuChoice)
+                    switch (menuSelected)
                     {
                         case 1:
                             result = recObject.GetLength();
@@ -77,7 +77,7 @@ namespace Assignment01
                             break;
                     }
                 }
-                while (menuChoice != 7);
+                while (menuSelected != 7);
             }
 
             catch (Exception e)
